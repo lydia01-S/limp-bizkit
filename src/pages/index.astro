@@ -1,16 +1,19 @@
 ---
+import BaseLayout from '../pages/layout/BaseLayout.astro';
+
+const pageTitle = "home Page";
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>limp bizkit</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+
+
+<main>
+ 
+<video class="video"  controls loop muted autoplay src="/limp-biz.mp4"></video>
+    
+    
+    
+</main>
+
+</BaseLayout>

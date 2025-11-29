@@ -1,0 +1,38 @@
+* {
+    background-color: black;
+}
+
+header {
+  padding: 80px ;
+  background-color: black;
+  color: white; 
+  text-align: center; 
+}
+
+header h1 {
+  font-size: 5em;
+  margin: 0; 
+}
+
+header p {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+ul, a {
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-flex;
+    float: right;
+    color: white;
+}
+
+.video {
+    position: relative;
+   left: 5%;
+   width: max-content;
+   opacity: 90%;
+}
+
+
