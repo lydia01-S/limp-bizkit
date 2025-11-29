@@ -1,18 +1,39 @@
 * {
     background-color: black;
+    color: white;
 }
 
+body {
+
+  font-family: "Syne Mono", monospace;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+
+
 header {
+margin: 0;
   padding: 80px ;
   background-color: black;
-  color: white; 
   text-align: center; 
 }
 
-header h1 {
-  font-size: 5em;
-  margin: 0; 
+.title {
+  font-family: "Nosifer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: capitalize;
+  font-weight: bold;
+   font-size: 5em;
 }
+
+.title:hover {
+    color: greenyellow;
+    transition: ease-in-out (0.3s);
+}
+
+
 
 header p {
   font-size: 1.5rem;
@@ -25,14 +46,36 @@ ul, a {
     text-decoration: none;
     display: inline-flex;
     float: right;
-    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    
 }
+
+.nav-links a {
+    padding: 0 15px;
+}
+
+a:hover {
+    color: greenyellow;
+    transition: ease-in-out (0.3s);
+}
+
+
 
 .video {
     position: relative;
    left: 5%;
    width: max-content;
    opacity: 90%;
+   margin-bottom: 35%;
+   margin-top: 10%;
 }
 
 
+.pagetitle {
+    text-align: center;
+}
+
+footer a{
+padding: 0 15px;
+}
