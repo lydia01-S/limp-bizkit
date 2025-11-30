@@ -10,11 +10,14 @@ body {
   text-transform: capitalize;
 }
 
-
+h1 {
+    text-align: center;
+    
+}
 
 header {
 margin: 0;
-  padding: 80px ;
+  padding: 30px ;
   background-color: black;
   text-align: center; 
 }
@@ -72,10 +75,32 @@ a:hover {
 }
 
 
-.pagetitle {
-    text-align: center;
-}
+
 
 footer a{
 padding: 0 15px;
+}
+
+footer {
+    margin-top: 40%;
+}
+
+.blog-posts {
+
+  margin: 0 auto;
+  width: 80%; 
+  max-width: 1000px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 5%;
+  margin-right: 10%;
+}
+
+.blog-posts li {
+  padding: 5px 10px;
+     list-style-type: circle;
+     text-decoration: underline;
 }
