@@ -63,26 +63,20 @@ a:hover {
     transition: ease-in-out (0.3s);
 }
 
-
-
 .video {
     position: relative;
    left: 5%;
    width: max-content;
    opacity: 90%;
-   margin-bottom: 35%;
    margin-top: 10%;
 }
-
-
-
 
 footer a{
 padding: 0 15px;
 }
 
 footer {
-    margin-top: 40%;
+    margin-top: 10%;
 }
 
 .blog-posts {
@@ -104,3 +98,37 @@ footer {
      list-style-type: circle;
      text-decoration: underline;
 }
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+    
+.div1 {
+    grid-column: span 3 / span 3;
+    grid-column-start: 2;
+    align-items: left;
+
+}
+
+.div2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-row-start: 2;
+    padding: 1%;
+   
+}
+
+.div3 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    padding: 2%;
+    font-weight: 2%;
+    line-height: 30px;
+}
+        

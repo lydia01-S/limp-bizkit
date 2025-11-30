@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./layout/BaseLayout.astro";
+const pageTitle = "News";
 ---
 <html lang="en">
   <head>
@@ -7,12 +8,11 @@ import BaseLayout from "./layout/BaseLayout.astro";
     <meta name="viewport" content="width=device-width" />
     <title>Astro</title>
   </head>
-  <BaseLayout>
+<BaseLayout pageTitle={pageTitle}>
   <body>
     
 
-    <h1>Blog</h1>
-  
+
     <ul class="blog-posts">
       <li><a href="/posts/post-1/">Loserville Tour</a></li>
        <li><a href="/posts/post-2">Bringing style back to Nu Metal</a></li>
