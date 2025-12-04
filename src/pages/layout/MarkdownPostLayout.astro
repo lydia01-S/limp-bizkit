@@ -1,25 +1,38 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-const {frontmatter} = Astro.props;
+
+// I tried to deploy the site but errors kept happening with this layout. I followed Netlifys instructions to fix it
+const { frontmatter } = Astro.props;
+
+
+const { 
+    title = 'Untitled Post',
+    author = 'Unknown Author',
+    description = 'A post with missing description.',
+    date = null,
+    image = {} 
+} = frontmatter || {}; 
+
+
+const imageUrl = image.url ?? null;
+const imageAlt = image.alt ?? 'Image missing description'; 
 ---
 
-<BaseLayout 
+<BaseLayout pageTitle={title}>  
+    <slot />
+    
+    <p>Written by: {author}</p>
+    <p><em>{description}</em></p> 
+    <p>Published: {date}</p>
 
-
-
-
-
-
-pageTitle={frontmatter.title}>
- <slot />
-<p>Written by: {frontmatter.author}</p>
-<p><em>{frontmatter.description}</em></p>
-<p>Published: {frontmatter.date}</p>
-
-<img src={frontmatter.image.url} width="300px" alt={frontmatter.image.alt} />
-
-
-
+    {imageUrl && 
+        <img 
+            src={imageUrl} 
+            width="300px" 
+            alt={imageAlt} 
+        />
+    }
+    
 </BaseLayout>
          
 
