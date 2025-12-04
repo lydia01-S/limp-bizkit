@@ -1,44 +1,49 @@
 ---
 import BaseLayout from "./layout/BaseLayout.astro";
-const pageTitle="playlist" 
+const pageTitle = "playlist";
 const initialSongs = [
-  "Break stuff - Limp Bizkit",
-  "Rollin' - Limp Bizkit",
-  "Take a look around - Limp Bizkit",
-  "My way - Limp Bizkit ",
-  "Nookie - Limp Bizkit ",
-  "Hot Dog - Limp Bizkit",
-  "Livin'it up - Limp Bizkit"
+    "Break stuff - Limp Bizkit",
+    "Rollin' - Limp Bizkit",
+    "Take a look around - Limp Bizkit",
+    "My way - Limp Bizkit ",
+    "Nookie - Limp Bizkit ",
+    "Hot Dog - Limp Bizkit",
+    "Livin'it up - Limp Bizkit",
 ];
 ---
-<BaseLayout pageTitle={pageTitle}>
-   
+    <!-- I tried to use Javascript to make the playlist and have it work but nothing I did would work properly. 
+     I used MDN to look up how to work it and with arrays + javascript gone through in class, but ive never used it 
+     and couldnt get it to work.  -->
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playlist</title>
-</head>
-<body>
-    <h1>Playlist</h1>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0"
+            />
+            <title>Playlist</title>
+        </head>
+        <body>
+            <BaseLayout pageTitle={pageTitle}>
+            <button id="shuffle-button">🔀 Shuffle</button>
 
-    <button id="shuffle-button">🔀 Shuffle</button>
+            <div id="playlist-container">
+                <h2>Add a New Song</h2>
+                <form id="add-song-form">
+                    <label for="song-title">Song Title:</label>
+                    <input
+                        type="text"
+                        id="song-title"
+                        name="songTitle"
+                        required
+                        placeholder="Artist - Title"
+                    />
+                    <button type="submit">➕ Add Song</button>
+                </form>
 
-    <ul id="playlist-container">
-        
+            </div>
+            </BaseLayout>
+        </body>
+    </html>
 
-    <hr>
-
-    <h2>Add a New Song</h2>
-    <form id="add-song-form">
-        <label for="song-title">Song Title:</label>
-        <input type="text" id="song-title" name="songTitle" required placeholder="Artist - Title">
-        <button type="submit">➕ Add Song</button>
-    </form>
-
-    
-
-    
-</body>
-</html>
