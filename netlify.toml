@@ -1,4 +1,2 @@
 [build.environment]
 NODE_VERSION = "18"
-
-# I had a problem with deploying the site on Netlify. Netlify gave instructions to fix which is this. 
